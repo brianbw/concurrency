@@ -1,0 +1,55 @@
+*****************************************************************
+Concurrent Hash Table Tests
+
+------------------------------------------------------------
+Select Option:
+	'c' - Coarse Grained Synchronization
+	'f' - Fine Grained Synchronization
+	'd' - Display machine stats
+	'n' - Change start and range
+	'q' - Quit
+> 	 '1' - 1*9 = 9 thread
+	 '2' - 2*9 = 18 thread
+	 '4' - 4*9 = 36 thread
+> 	 6 Initializes, 2 Removes, 2 Searches, 2 Inserts, 6 Deletes.
+------------------------------------------------------------
+Fine Grained Hash Table
+
+THREAD INSERTING, FROM: 500000 TO: 999999
+THREAD INSERTING, FROM: 1000000 TO: 1499999
+THREAD INSERTING, FROM: 2000000 TO: 2499999
+THREAD INSERTING, FROM: 1500000 TO: 1999999
+THREAD INSERTING, FROM: 2500000 TO: 2999999
+THREAD INSERTING, FROM: 3000000 TO: 3499999
+
+Length after init section: 3000000
+
+THREAD REMOVING, START: 500000 TO: 999999
+THREAD REMOVING, START: 2000000 TO: 2499999THREAD SEARCHING, START: 
+THREAD INSERTING, FROM: 2000000 TO: 2499999
+1000000 TO: 1499999
+THREAD SEARCHING, START: 2500000 TO: 2999999
+THREAD INSERTING, FROM: 3500000 TO: 3999999
+
+Length after main section: 3000000
+
+THREAD REMOVING, START: 1000000 TO: 1499999
+THREAD REMOVING, START: 2000000 TO: 2499999
+THREAD REMOVING, START: 2500000 TO: 2999999
+THREAD REMOVING, START: THREAD REMOVING, START: 1500000 TO: 1999999
+3000000 TO: THREAD REMOVING, START: 3500000 TO: 3999999
+3499999
+
+Length after end section: 0
+
+
+Run-time: 4061 milliseconds
+
+------------------------------------------------------------
+Select Option:
+	'c' - Coarse Grained Synchronization
+	'f' - Fine Grained Synchronization
+	'd' - Display machine stats
+	'n' - Change start and range
+	'q' - Quit
+> 
